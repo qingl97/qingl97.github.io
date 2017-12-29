@@ -54,13 +54,13 @@ disqus:
   shortname: qliang 
 
 ## Google Analytics ##
-# ga_tracking_id:  #Google analytics id for the site
+ga_tracking_id: UA-56388317-1 
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  # app_id:  #LeanCloud App id
-  # app_key:  #LeanCloud App key
-  # app_class:  #LeanCloud App class
+  app_id: Gwte8ho29S2t8PmhUQR8zPUj-gzGzoHsz
+  app_key: 28B3z16RRpaxWFdh0X3iFJos
+  app_class: Default_Class
 
 # mathjax: true
 
