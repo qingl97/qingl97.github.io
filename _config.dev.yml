@@ -43,7 +43,7 @@ author:
   email:  qingl97@gmail.com
   # facebook:  #your Facebook username
   # twitter:  #your Twitter username
-  github: github.com/qingl97 
+  github: qingl97 
   # googleplus:  #your Google+ username
   # weibo:  #your Weibo username
   # douban:  #your Douban username
@@ -51,7 +51,7 @@ author:
 
 ## Comment system (Disqus) ##
 disqus:
-  # shortname:  #the Disqus shortname for the site
+  shortname: qliang 
 
 ## Google Analytics ##
 # ga_tracking_id:  #Google analytics id for the site

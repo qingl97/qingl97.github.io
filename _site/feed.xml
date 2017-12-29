@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-12-29T14:11:09+01:00</updated><id>http://0.0.0.0:4000/</id><title type="html">^_^</title><subtitle>LQ's Blog
-</subtitle><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2017-12-29T14:51:06+01:00</updated><id>http://0.0.0.0:4000/</id><title type="html">^_^</title><subtitle>LQ's Blog
+</subtitle><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><entry><title type="html">Distributed System learning resources</title><link href="http://0.0.0.0:4000/2017/12/29/hadoop-learning-resources.html" rel="alternate" type="text/html" title="Distributed System learning resources" /><published>2017-12-29T00:00:00+01:00</published><updated>2017-12-29T00:00:00+01:00</updated><id>http://0.0.0.0:4000/2017/12/29/hadoop-learning-resources</id><content type="html" xml:base="http://0.0.0.0:4000/2017/12/29/hadoop-learning-resources.html">&lt;h2 id=&quot;some-introduction-articles&quot;&gt;Some introduction articles&lt;/h2&gt;
+&lt;p&gt;An introduction article from Google Code University : &lt;a href=&quot;http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/lecture/h23/dsys/dsd-tutorial.html&quot;&gt;Introduction to Distributed System Design&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;protocals&quot;&gt;Protocals&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://raft.github.io/&quot;&gt;raft&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab1.0&quot;&gt;Zab in ZooKeeper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paxos_(computer_science)&quot;&gt;Paxos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
+
+&lt;h3 id=&quot;hadoop&quot;&gt;Hadoop&lt;/h3&gt;
+
+&lt;h3 id=&quot;zookeeper&quot;&gt;ZooKeeper&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;spark&quot;&gt;Spark&lt;/h3&gt;</content><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><category term="Tech" /><category term="Distributed_System" /><summary type="html">Some introduction articles An introduction article from Google Code University : Introduction to Distributed System Design Protocals raft Zab in ZooKeeper Paxos Projects Hadoop ZooKeeper wiki Spark</summary></entry></feed>
