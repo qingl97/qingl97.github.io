@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-03-12T23:56:20+01:00</updated><id>/</id><title type="html">^_^</title><subtitle>LQ's Blog
+</subtitle><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><entry><title type="html">Hadoop Codebase</title><link href="/2018/01/15/hadoop-codebase.html" rel="alternate" type="text/html" title="Hadoop Codebase" /><published>2018-01-15T00:00:00+01:00</published><updated>2018-01-15T00:00:00+01:00</updated><id>/2018/01/15/hadoop-codebase</id><content type="html" xml:base="/2018/01/15/hadoop-codebase.html">&lt;h2 id=&quot;codebase-structure&quot;&gt;Codebase structure&lt;/h2&gt;
+
+&lt;h3 id=&quot;core-subprojects&quot;&gt;Core subprojects&lt;/h3&gt;
+
+&lt;h4 id=&quot;hadoop-common-project&quot;&gt;hadoop-common-project&lt;/h4&gt;
+
+&lt;h4 id=&quot;hadoop-client&quot;&gt;hadoop-client&lt;/h4&gt;
+
+&lt;h4 id=&quot;hadoop-hdfs-project&quot;&gt;hadoop-hdfs-project&lt;/h4&gt;
+
+&lt;h4 id=&quot;hadoop-mapreduce-project&quot;&gt;hadoop-mapreduce-project&lt;/h4&gt;
+
+&lt;h4 id=&quot;hadoop-yarn-project&quot;&gt;hadoop-yarn-project&lt;/h4&gt;
+
+&lt;h4 id=&quot;hadoop-tools&quot;&gt;hadoop-tools&lt;/h4&gt;
+
+&lt;h3 id=&quot;dev-support-related&quot;&gt;Dev support related&lt;/h3&gt;</content><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><category term="Hadoop-Codebase" /><category term="Hadoop" /><category term="Distributed_System" /><summary type="html">Codebase structure Core subprojects hadoop-common-project hadoop-client hadoop-hdfs-project hadoop-mapreduce-project hadoop-yarn-project hadoop-tools Dev support related</summary></entry><entry><title type="html">Install Hadoop 2.8.2 on Mac OSX 10.13 High Sierra</title><link href="/2018/01/02/install-and-setup-hadoop-on-macos-high-sierra.html" rel="alternate" type="text/html" title="Install Hadoop 2.8.2  on Mac OSX 10.13 High Sierra" /><published>2018-01-02T00:00:00+01:00</published><updated>2018-01-02T00:00:00+01:00</updated><id>/2018/01/02/install-and-setup-hadoop-on-macos-high-sierra</id><content type="html" xml:base="/2018/01/02/install-and-setup-hadoop-on-macos-high-sierra.html">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Install hadoop via homebrew is easy!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$ brew search hadoop&lt;/li&gt;
+  &lt;li&gt;$ brew install hadoop&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The installation log below :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;==&amp;gt; Caveats
+In Hadoop's config file:
+  /usr/local/opt/hadoop/libexec/etc/hadoop/hadoop-env.sh,
+  /usr/local/opt/hadoop/libexec/etc/hadoop/mapred-env.sh and
+  /usr/local/opt/hadoop/libexec/etc/hadoop/yarn-env.sh
+$JAVA_HOME has been set to be the output of:
+  /usr/libexec/java_home
+==&amp;gt; Summary
+🍺  /usr/local/Cellar/hadoop/2.8.2: 21,056 files, 618MB, built in 2 minutes 9 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;get-hadoop-running&quot;&gt;Get hadoop running&lt;/h2&gt;
+
+&lt;h3 id=&quot;setup-properties&quot;&gt;Setup properties&lt;/h3&gt;
+
+&lt;p&gt;$ cd /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop/&lt;/p&gt;
+&lt;h4 id=&quot;hadoop-envsh&quot;&gt;hadoop-env.sh&lt;/h4&gt;
+
+&lt;p&gt;Change $HADOOP_OPTS by adding additional properties : 
+HADOOP_OPTS =&lt;/p&gt;
+
+&lt;h4 id=&quot;when-starting-hadoop-using-the-public-distributed-version&quot;&gt;When starting Hadoop using the public distributed version&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;___________________    | /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop @ gogo (qliang) 
+$ =&amp;gt; hstart
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+18/01/02 23:48:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-namenode-gogo.out
+localhost: starting datanode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-datanode-gogo.out
+Starting secondary namenodes [0.0.0.0]
+The authenticity of host '0.0.0.0 (0.0.0.0)' can't be established.
+ECDSA key fingerprint is SHA256:1CrU8INzO6C+f8rcQ4HGpfykSXdTLahqHBnTPt/mMYA.
+Are you sure you want to continue connecting (yes/no)? yes
+0.0.0.0: Warning: Permanently added '0.0.0.0' (ECDSA) to the list of known hosts.
+0.0.0.0: starting secondarynamenode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-secondarynamenode-gogo.out
+18/01/02 23:48:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/yarn-qliang-resourcemanager-gogo.out
+localhost: starting nodemanager, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/yarn-qliang-nodemanager-gogo.out
+___________________    | /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop @ gogo (qliang) 
+$ =&amp;gt; jps
+96672 Jps
+96403 SecondaryNameNode
+96293 DataNode
+96614 NodeManager
+96522 ResourceManager
+96207 NameNode
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You may notice warning that “Unable to load native-hadoop library for your platform… using builtin-java classes where applicable”. This is because some components of hadoop are provided with both Java and native implementation. There can be performance gain, like the compression algorithm, with the native implementation which however need to be build on your target platform. I am going to log the steps for building a native version(Mac OSX 10.13 in my case) in the following version.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-hadoop-natively&quot;&gt;Build Hadoop natively&lt;/h2&gt;
+
+&lt;h3 id=&quot;prerequisite&quot;&gt;Prerequisite&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cmake (version &amp;gt;= 3.1.2 when building hadoop version &amp;gt;= 2.7)&lt;/li&gt;
+  &lt;li&gt;openssl (&amp;gt;=1.0.2)&lt;/li&gt;
+  &lt;li&gt;zlib&lt;/li&gt;
+  &lt;li&gt;protobuf (2.5.0)&lt;/li&gt;
+  &lt;li&gt;maven&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;errors-encountered-while-building-hadoop-natively&quot;&gt;Errors encountered while building Hadoop natively&lt;/h3&gt;
+
+&lt;p&gt;If you had below error while building, you should check you cmake version.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The ' characters around the executable and arguments are
+not part of the command.
+     [exec] -- Configuring incomplete, errors occurred!
+     [exec] See also &quot;/Users/qliang/dev/distributed-system/hadoop/hadoop-tools/hadoop-pipes/targCMake Error at /usr/local/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake:136 (message):
+     [exec]   Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
+     [exec]   system variable OPENSSL_ROOT_DIR (missing: OPENSSL_INCLUDE_DIR)
+     [exec] Call Stack (most recent call first):
+     [exec]   /usr/local/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake:343 (_FPHSA_FAILURE_MESSAGE)
+     [exec]   /usr/local/share/cmake-3.0/Modules/FindOpenSSL.cmake:328 (find_package_handle_standard_args)
+     [exec]   CMakeLists.txt:24 (find_package)
+     [exec] 
+     [exec] 
+     [exec] et/native/CMakeFiles/CMakeOutput.log&quot;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><category term="Tech" /><category term="Distributed_System" /><category term="Hadoop" /><summary type="html">Installation Install hadoop via homebrew is easy! $ brew search hadoop $ brew install hadoop The installation log below : ==&amp;gt; Caveats In Hadoop's config file: /usr/local/opt/hadoop/libexec/etc/hadoop/hadoop-env.sh, /usr/local/opt/hadoop/libexec/etc/hadoop/mapred-env.sh and /usr/local/opt/hadoop/libexec/etc/hadoop/yarn-env.sh $JAVA_HOME has been set to be the output of: /usr/libexec/java_home ==&amp;gt; Summary 🍺 /usr/local/Cellar/hadoop/2.8.2: 21,056 files, 618MB, built in 2 minutes 9 seconds Get hadoop running Setup properties $ cd /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop/ hadoop-env.sh Change $HADOOP_OPTS by adding additional properties : HADOOP_OPTS = When starting Hadoop using the public distributed version ___________________ | /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop @ gogo (qliang) $ =&amp;gt; hstart This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh 18/01/02 23:48:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable Starting namenodes on [localhost] localhost: starting namenode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-namenode-gogo.out localhost: starting datanode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-datanode-gogo.out Starting secondary namenodes [0.0.0.0] The authenticity of host '0.0.0.0 (0.0.0.0)' can't be established. ECDSA key fingerprint is SHA256:1CrU8INzO6C+f8rcQ4HGpfykSXdTLahqHBnTPt/mMYA. Are you sure you want to continue connecting (yes/no)? yes 0.0.0.0: Warning: Permanently added '0.0.0.0' (ECDSA) to the list of known hosts. 0.0.0.0: starting secondarynamenode, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/hadoop-qliang-secondarynamenode-gogo.out 18/01/02 23:48:52 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable starting yarn daemons starting resourcemanager, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/yarn-qliang-resourcemanager-gogo.out localhost: starting nodemanager, logging to /usr/local/Cellar/hadoop/2.8.2/libexec/logs/yarn-qliang-nodemanager-gogo.out ___________________ | /usr/local/Cellar/hadoop/2.8.2/libexec/etc/hadoop @ gogo (qliang) $ =&amp;gt; jps 96672 Jps 96403 SecondaryNameNode 96293 DataNode 96614 NodeManager 96522 ResourceManager 96207 NameNode You may notice warning that “Unable to load native-hadoop library for your platform… using builtin-java classes where applicable”. This is because some components of hadoop are provided with both Java and native implementation. There can be performance gain, like the compression algorithm, with the native implementation which however need to be build on your target platform. I am going to log the steps for building a native version(Mac OSX 10.13 in my case) in the following version. Build Hadoop natively Prerequisite cmake (version &amp;gt;= 3.1.2 when building hadoop version &amp;gt;= 2.7) openssl (&amp;gt;=1.0.2) zlib protobuf (2.5.0) maven Errors encountered while building Hadoop natively If you had below error while building, you should check you cmake version. The ' characters around the executable and arguments are not part of the command. [exec] -- Configuring incomplete, errors occurred! [exec] See also &quot;/Users/qliang/dev/distributed-system/hadoop/hadoop-tools/hadoop-pipes/targCMake Error at /usr/local/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake:136 (message): [exec] Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the [exec] system variable OPENSSL_ROOT_DIR (missing: OPENSSL_INCLUDE_DIR) [exec] Call Stack (most recent call first): [exec] /usr/local/share/cmake-3.0/Modules/FindPackageHandleStandardArgs.cmake:343 (_FPHSA_FAILURE_MESSAGE) [exec] /usr/local/share/cmake-3.0/Modules/FindOpenSSL.cmake:328 (find_package_handle_standard_args) [exec] CMakeLists.txt:24 (find_package) [exec] [exec] [exec] et/native/CMakeFiles/CMakeOutput.log&quot;.</summary></entry><entry><title type="html">Distributed System learning resources</title><link href="/2017/12/29/hadoop-learning-resources.html" rel="alternate" type="text/html" title="Distributed System learning resources" /><published>2017-12-29T00:00:00+01:00</published><updated>2017-12-29T00:00:00+01:00</updated><id>/2017/12/29/hadoop-learning-resources</id><content type="html" xml:base="/2017/12/29/hadoop-learning-resources.html">&lt;h2 id=&quot;some-introduction-articles&quot;&gt;Some introduction articles&lt;/h2&gt;
+&lt;p&gt;An introduction article from Google Code University : &lt;a href=&quot;http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/lecture/h23/dsys/dsd-tutorial.html&quot;&gt;Introduction to Distributed System Design&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;protocals&quot;&gt;Protocals&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://raft.github.io/&quot;&gt;raft&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/ZOOKEEPER/Zab1.0&quot;&gt;Zab in ZooKeeper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Paxos_(computer_science)&quot;&gt;Paxos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;projects&quot;&gt;Projects&lt;/h2&gt;
+
+&lt;h3 id=&quot;hadoop&quot;&gt;Hadoop&lt;/h3&gt;
+
+&lt;h3 id=&quot;zookeeper&quot;&gt;ZooKeeper&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;spark&quot;&gt;Spark&lt;/h3&gt;</content><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><category term="Tech" /><category term="Distributed_System" /><summary type="html">Some introduction articles An introduction article from Google Code University : Introduction to Distributed System Design Protocals raft Zab in ZooKeeper Paxos Projects Hadoop ZooKeeper wiki Spark</summary></entry></feed>
