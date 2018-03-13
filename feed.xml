@@ -1,5 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-03-12T23:56:20+01:00</updated><id>/</id><title type="html">^_^</title><subtitle>LQ's Blog
-</subtitle><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><entry><title type="html">Hadoop Codebase</title><link href="/2018/01/15/hadoop-codebase.html" rel="alternate" type="text/html" title="Hadoop Codebase" /><published>2018-01-15T00:00:00+01:00</published><updated>2018-01-15T00:00:00+01:00</updated><id>/2018/01/15/hadoop-codebase</id><content type="html" xml:base="/2018/01/15/hadoop-codebase.html">&lt;h2 id=&quot;codebase-structure&quot;&gt;Codebase structure&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-03-13T01:00:03+01:00</updated><id>/</id><title type="html">Talk is as important as code</title><subtitle>more than a developer
+</subtitle><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><entry><title type="html">Things that I should master as a Java developer</title><link href="/2018/03/13/things-what-I-should-know-as-a-java-developer.html" rel="alternate" type="text/html" title="Things that I should master as a Java developer" /><published>2018-03-13T00:00:00+01:00</published><updated>2018-03-13T00:00:00+01:00</updated><id>/2018/03/13/things-what-I-should-know-as-a-java-developer</id><content type="html" xml:base="/2018/03/13/things-what-I-should-know-as-a-java-developer.html">&lt;h2 id=&quot;data-structures&quot;&gt;Data structures&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Array&lt;/li&gt;
+  &lt;li&gt;List&lt;/li&gt;
+  &lt;li&gt;Map&lt;/li&gt;
+  &lt;li&gt;Stack - Stack&lt;/li&gt;
+  &lt;li&gt;Heap (min, max) - PriorityQueue&lt;/li&gt;
+  &lt;li&gt;Queue - LinkedList&lt;/li&gt;
+  &lt;li&gt;Graph&lt;/li&gt;
+  &lt;li&gt;BinaryTree&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;algorithms&quot;&gt;Algorithms&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sorting&lt;/li&gt;
+  &lt;li&gt;Searching&lt;/li&gt;
+  &lt;li&gt;Dynamic programming&lt;/li&gt;
+  &lt;li&gt;Greedy algo&lt;/li&gt;
+  &lt;li&gt;Graph&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Indexing - BTree, B+Tree, how the indexing in ElasticSearch works internally?
+Indexing in a distributed system&lt;/p&gt;
+
+&lt;h2 id=&quot;java-concurrency&quot;&gt;Java concurrency&lt;/h2&gt;
+
+&lt;p&gt;Usage of Thread, Executors, ExecutorService, Future, different locks, thread-safe data structures&lt;/p&gt;
+
+&lt;p&gt;Race condition (deadlock, live lock) / how to resolve/avoid them?&lt;/p&gt;
+
+&lt;p&gt;Asynchronous tasks implementation&lt;/p&gt;
+
+&lt;p&gt;Immutable object&lt;/p&gt;
+
+&lt;p&gt;How to write thread-safe class?&lt;/p&gt;
+
+&lt;p&gt;How concurrency is managed in a graphical application? (UI thread, main thread, task thread)&lt;/p&gt;
+
+&lt;p&gt;How concurrency is managed when a Web server is processing requests?&lt;/p&gt;
+
+&lt;h2 id=&quot;design-patterns-in-java-core-library&quot;&gt;Design Patterns in Java core library&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Proxy - java reflection proxy&lt;/li&gt;
+  &lt;li&gt;Builder&lt;/li&gt;
+  &lt;li&gt;Factory&lt;/li&gt;
+  &lt;li&gt;AbstractFactory&lt;/li&gt;
+  &lt;li&gt;Chain of responsibilities&lt;/li&gt;
+  &lt;li&gt;Decorator&lt;/li&gt;
+  &lt;li&gt;Adapter&lt;/li&gt;
+  &lt;li&gt;Strategy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;distributed-system-concerns&quot;&gt;Distributed System concerns&lt;/h2&gt;
+
+&lt;p&gt;Below is quoted from &lt;a href=&quot;http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/lecture/h23/dsys/dsd-tutorial.html&quot;&gt;Google Code University - Introduction to Distributed System Design&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fault-Tolerant: It can recover from component failures without performing incorrect actions.&lt;/li&gt;
+  &lt;li&gt;Highly Available: It can restore operations, permitting it to resume providing services even when some components have failed.&lt;/li&gt;
+  &lt;li&gt;Recoverable: Failed components can restart themselves and rejoin the system, after the cause of failure has been repaired.&lt;/li&gt;
+  &lt;li&gt;Consistent: The system can coordinate actions by multiple components often in the presence of concurrency and failure. This underlies the ability of a distributed system to act like a non-distributed system.&lt;/li&gt;
+  &lt;li&gt;Scalable: It can operate correctly even as some aspect of the system is scaled to a larger size. For example, we might increase the size of the network on which the system is running. This increases the frequency of network outages and could degrade a “non-scalable” system. Similarly, we might increase the number of users or servers, or overall load on the system. In a scalable system, this should not have a significant effect.&lt;/li&gt;
+  &lt;li&gt;Predictable Performance: The ability to provide desired responsiveness in a timely manner.&lt;/li&gt;
+  &lt;li&gt;Secure: The system authenticates access to data and services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;streams&quot;&gt;Streams&lt;/h2&gt;
+
+&lt;h2 id=&quot;nio--sockets&quot;&gt;NIO / Sockets&lt;/h2&gt;
+
+&lt;h2 id=&quot;java-memory-model&quot;&gt;Java Memory model&lt;/h2&gt;
+
+&lt;h2 id=&quot;optimisation-gc--trouble-shooting&quot;&gt;Optimisation GC / trouble shooting&lt;/h2&gt;
+&lt;p&gt;GC overhead limit exceeded
+Possible memory leak&lt;/p&gt;
+
+&lt;h2 id=&quot;tests&quot;&gt;Tests&lt;/h2&gt;
+&lt;p&gt;UT / AT / IT / Frameworks(cucumber, testNG, Junit, Mockito, Wiremock)&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud&quot;&gt;Cloud&lt;/h2&gt;
+
+&lt;h2 id=&quot;agile-practice&quot;&gt;Agile practice&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;morning standup&lt;/li&gt;
+  &lt;li&gt;retrospective&lt;/li&gt;
+  &lt;li&gt;Kankan / Scrum&lt;/li&gt;
+  &lt;li&gt;Grooming to clear out the context of tasks&lt;/li&gt;
+  &lt;li&gt;task prioritize/ product oriented&lt;/li&gt;
+  &lt;li&gt;are them cumbersome to small/big teams?&lt;/li&gt;
+  &lt;li&gt;how to improve the productivity of a team?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;clean-code&quot;&gt;Clean code&lt;/h2&gt;
+
+&lt;h2 id=&quot;continous-integration--continous-delivery&quot;&gt;Continous Integration / Continous Delivery&lt;/h2&gt;
+
+&lt;h2 id=&quot;what-i-think-about-work&quot;&gt;What I think about work?&lt;/h2&gt;
+&lt;p&gt;How to survive in a team?
+How to lead a team?&lt;/p&gt;
+
+&lt;p&gt;Experience working in a complex system :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;technically complex - hard problems(distributed system, performance constraints, concurrency, big codebase)&lt;/li&gt;
+  &lt;li&gt;functionally complex - requires domain specific knowledge to understand the code as a whole&lt;/li&gt;
+  &lt;li&gt;historical complex - legacy code mal-desgined&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Qing LIANG</name><email>qingl97@gmail.com</email></author><category term="Java" /><summary type="html">Data structures Array List Map Stack - Stack Heap (min, max) - PriorityQueue Queue - LinkedList Graph BinaryTree Algorithms Sorting Searching Dynamic programming Greedy algo Graph Indexing - BTree, B+Tree, how the indexing in ElasticSearch works internally? Indexing in a distributed system Java concurrency Usage of Thread, Executors, ExecutorService, Future, different locks, thread-safe data structures Race condition (deadlock, live lock) / how to resolve/avoid them? Asynchronous tasks implementation Immutable object How to write thread-safe class? How concurrency is managed in a graphical application? (UI thread, main thread, task thread) How concurrency is managed when a Web server is processing requests? Design Patterns in Java core library Proxy - java reflection proxy Builder Factory AbstractFactory Chain of responsibilities Decorator Adapter Strategy Distributed System concerns Below is quoted from Google Code University - Introduction to Distributed System Design Fault-Tolerant: It can recover from component failures without performing incorrect actions. Highly Available: It can restore operations, permitting it to resume providing services even when some components have failed. Recoverable: Failed components can restart themselves and rejoin the system, after the cause of failure has been repaired. Consistent: The system can coordinate actions by multiple components often in the presence of concurrency and failure. This underlies the ability of a distributed system to act like a non-distributed system. Scalable: It can operate correctly even as some aspect of the system is scaled to a larger size. For example, we might increase the size of the network on which the system is running. This increases the frequency of network outages and could degrade a “non-scalable” system. Similarly, we might increase the number of users or servers, or overall load on the system. In a scalable system, this should not have a significant effect. Predictable Performance: The ability to provide desired responsiveness in a timely manner. Secure: The system authenticates access to data and services Streams NIO / Sockets Java Memory model Optimisation GC / trouble shooting GC overhead limit exceeded Possible memory leak Tests UT / AT / IT / Frameworks(cucumber, testNG, Junit, Mockito, Wiremock) Cloud Agile practice morning standup retrospective Kankan / Scrum Grooming to clear out the context of tasks task prioritize/ product oriented are them cumbersome to small/big teams? how to improve the productivity of a team? Clean code Continous Integration / Continous Delivery What I think about work? How to survive in a team? How to lead a team? Experience working in a complex system : technically complex - hard problems(distributed system, performance constraints, concurrency, big codebase) functionally complex - requires domain specific knowledge to understand the code as a whole historical complex - legacy code mal-desgined</summary></entry><entry><title type="html">Hadoop Codebase</title><link href="/2018/01/15/hadoop-codebase.html" rel="alternate" type="text/html" title="Hadoop Codebase" /><published>2018-01-15T00:00:00+01:00</published><updated>2018-01-15T00:00:00+01:00</updated><id>/2018/01/15/hadoop-codebase</id><content type="html" xml:base="/2018/01/15/hadoop-codebase.html">&lt;h2 id=&quot;codebase-structure&quot;&gt;Codebase structure&lt;/h2&gt;
 
 &lt;h3 id=&quot;core-subprojects&quot;&gt;Core subprojects&lt;/h3&gt;
 

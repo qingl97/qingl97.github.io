@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Hadoop Codebase - Talk is as important as code</title>
-<meta name="description" content="Codebase structureCore subprojectshadoop-common-projecthadoop-clienthadoop-hdfs-projecthadoop-mapreduce-projecthadoop-yarn-projecthadoop-toolsDev support rel...">
-<link rel="canonical" href="/2018/01/15/hadoop-codebase.html"><link rel="alternate" type="application/rss+xml" title="Talk is as important as code" href="/feed.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Things that I should master as a Java developer - Talk is as important as code</title>
+<meta name="description" content="Data structures  Array  List  Map  Stack - Stack  Heap (min, max) - PriorityQueue  Queue - LinkedList  Graph  BinaryTreeAlgorithms  Sorting  Searching  Dynam...">
+<link rel="canonical" href="/2018/03/13/things-what-I-should-know-as-a-java-developer.html"><link rel="alternate" type="application/rss+xml" title="Talk is as important as code" href="/feed.xml">
 <!-- for Safari on iOS https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/app-icon/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo/icon-180x180.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/images/logo/icon-167x167.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/images/logo/icon-152x152.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/images/logo/icon-120x120.png"><link rel="shortcut icon" href="/assets/images/logo/icon-120x120.png">
 <!-- for Chrome on Android https://developer.chrome.com/multidevice/android/installtohomescreen -->
 <meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/assets/images/logo/icon-192x192.png">
@@ -33,42 +33,129 @@
 		<div class="col-1">
 			<article itemscope itemtype="http://schema.org/BlogPosting">
 				<meta itemprop="mainEntityOfPage" itemscope itemType="https://schema.org/WebPage"/>
-				<header class="article-header"><h1 itemprop="headline" itemprop="name headline">Hadoop Codebase</h1><div class="m-article-data clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Qing LIANG"/></meta><ul class="inline-list tag-wrapper"><li>
-          <a class="round-rect-button" href="/all.html?tag=Hadoop-Codebase">Hadoop-Codebase</a>
-        </li><li>
-          <a class="round-rect-button" href="/all.html?tag=Hadoop">Hadoop</a>
-        </li><li>
-          <a class="round-rect-button" href="/all.html?tag=Distributed_System">Distributed_System</a>
+				<header class="article-header"><h1 itemprop="headline" itemprop="name headline">Things that I should master as a Java developer</h1><div class="m-article-data clearfix"><meta itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Qing LIANG"/></meta><ul class="inline-list tag-wrapper"><li>
+          <a class="round-rect-button" href="/all.html?tag=Java">Java</a>
         </li></ul><div class="other-wrapper"><div class="view-wrapper">
-        <span class="article-view" id="post-key-20180115">0
+        <span class="article-view" id="post-key-20180313">0
         </span> views
-      </div><div class="date-wrapper"><time class="article-meta" datetime="2018-01-15T00:00:00+01:00"
-          itemprop="datePublished">Jan 15, 2018
+      </div><div class="date-wrapper"><time class="article-meta" datetime="2018-03-13T00:00:00+01:00"
+          itemprop="datePublished">Mar 13, 2018
         </time></div>
   </div>
 </div>
 </header>
-				<div class="m-article-content js-article-content" itemprop="articleBody"><h2 id="codebase-structure">Codebase structure</h2>
+				<div class="m-article-content js-article-content" itemprop="articleBody"><h2 id="data-structures">Data structures</h2>
 
-<h3 id="core-subprojects">Core subprojects</h3>
+<ul>
+  <li>Array</li>
+  <li>List</li>
+  <li>Map</li>
+  <li>Stack - Stack</li>
+  <li>Heap (min, max) - PriorityQueue</li>
+  <li>Queue - LinkedList</li>
+  <li>Graph</li>
+  <li>BinaryTree</li>
+</ul>
 
-<h4 id="hadoop-common-project">hadoop-common-project</h4>
+<h2 id="algorithms">Algorithms</h2>
 
-<h4 id="hadoop-client">hadoop-client</h4>
+<ul>
+  <li>Sorting</li>
+  <li>Searching</li>
+  <li>Dynamic programming</li>
+  <li>Greedy algo</li>
+  <li>Graph</li>
+</ul>
 
-<h4 id="hadoop-hdfs-project">hadoop-hdfs-project</h4>
+<p>Indexing - BTree, B+Tree, how the indexing in ElasticSearch works internally?
+Indexing in a distributed system</p>
 
-<h4 id="hadoop-mapreduce-project">hadoop-mapreduce-project</h4>
+<h2 id="java-concurrency">Java concurrency</h2>
 
-<h4 id="hadoop-yarn-project">hadoop-yarn-project</h4>
+<p>Usage of Thread, Executors, ExecutorService, Future, different locks, thread-safe data structures</p>
 
-<h4 id="hadoop-tools">hadoop-tools</h4>
+<p>Race condition (deadlock, live lock) / how to resolve/avoid them?</p>
 
-<h3 id="dev-support-related">Dev support related</h3>
+<p>Asynchronous tasks implementation</p>
+
+<p>Immutable object</p>
+
+<p>How to write thread-safe class?</p>
+
+<p>How concurrency is managed in a graphical application? (UI thread, main thread, task thread)</p>
+
+<p>How concurrency is managed when a Web server is processing requests?</p>
+
+<h2 id="design-patterns-in-java-core-library">Design Patterns in Java core library</h2>
+
+<ul>
+  <li>Proxy - java reflection proxy</li>
+  <li>Builder</li>
+  <li>Factory</li>
+  <li>AbstractFactory</li>
+  <li>Chain of responsibilities</li>
+  <li>Decorator</li>
+  <li>Adapter</li>
+  <li>Strategy</li>
+</ul>
+
+<h2 id="distributed-system-concerns">Distributed System concerns</h2>
+
+<p>Below is quoted from <a href="http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/lecture/h23/dsys/dsd-tutorial.html">Google Code University - Introduction to Distributed System Design</a></p>
+<ul>
+  <li>Fault-Tolerant: It can recover from component failures without performing incorrect actions.</li>
+  <li>Highly Available: It can restore operations, permitting it to resume providing services even when some components have failed.</li>
+  <li>Recoverable: Failed components can restart themselves and rejoin the system, after the cause of failure has been repaired.</li>
+  <li>Consistent: The system can coordinate actions by multiple components often in the presence of concurrency and failure. This underlies the ability of a distributed system to act like a non-distributed system.</li>
+  <li>Scalable: It can operate correctly even as some aspect of the system is scaled to a larger size. For example, we might increase the size of the network on which the system is running. This increases the frequency of network outages and could degrade a “non-scalable” system. Similarly, we might increase the number of users or servers, or overall load on the system. In a scalable system, this should not have a significant effect.</li>
+  <li>Predictable Performance: The ability to provide desired responsiveness in a timely manner.</li>
+  <li>Secure: The system authenticates access to data and services</li>
+</ul>
+
+<h2 id="streams">Streams</h2>
+
+<h2 id="nio--sockets">NIO / Sockets</h2>
+
+<h2 id="java-memory-model">Java Memory model</h2>
+
+<h2 id="optimisation-gc--trouble-shooting">Optimisation GC / trouble shooting</h2>
+<p>GC overhead limit exceeded
+Possible memory leak</p>
+
+<h2 id="tests">Tests</h2>
+<p>UT / AT / IT / Frameworks(cucumber, testNG, Junit, Mockito, Wiremock)</p>
+
+<h2 id="cloud">Cloud</h2>
+
+<h2 id="agile-practice">Agile practice</h2>
+<ul>
+  <li>morning standup</li>
+  <li>retrospective</li>
+  <li>Kankan / Scrum</li>
+  <li>Grooming to clear out the context of tasks</li>
+  <li>task prioritize/ product oriented</li>
+  <li>are them cumbersome to small/big teams?</li>
+  <li>how to improve the productivity of a team?</li>
+</ul>
+
+<h2 id="clean-code">Clean code</h2>
+
+<h2 id="continous-integration--continous-delivery">Continous Integration / Continous Delivery</h2>
+
+<h2 id="what-i-think-about-work">What I think about work?</h2>
+<p>How to survive in a team?
+How to lead a team?</p>
+
+<p>Experience working in a complex system :</p>
+<ul>
+  <li>technically complex - hard problems(distributed system, performance constraints, concurrency, big codebase)</li>
+  <li>functionally complex - requires domain specific knowledge to understand the code as a whole</li>
+  <li>historical complex - legacy code mal-desgined</li>
+</ul>
 </div>
-				<footer><meta itemprop="dateModified" content="2018-01-15T00:00:00+01:00"><div class="article-license"><div class="m-license"><div class="clearfix"><a class="octocat" href="https://github.com/qingl97/qingl97.github.io/tree/master/_posts/2018-01-15-hadoop-codebase.md">
+				<footer><meta itemprop="dateModified" content="2018-03-13T00:00:00+01:00"><div class="article-license"><div class="m-license"><div class="clearfix"><a class="octocat" href="https://github.com/qingl97/qingl97.github.io/tree/master/_posts/2018-03-13-things-what-I-should-know-as-a-java-developer.md">
         <img alt="View on Github" src="/assets/images/octocat.jpg" />
-      </a><p><a href="https://github.com/qingl97/qingl97.github.io/tree/master/_posts/2018-01-15-hadoop-codebase.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+      </a><p><a href="https://github.com/qingl97/qingl97.github.io/tree/master/_posts/2018-03-13-things-what-I-should-know-as-a-java-developer.md">View this POST on Github.</a></p><p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> license.</p><a class="license" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
       <img alt="Creative Commons License" src="/assets/images/license-cc4.png" />
     </a><p></p>
   </div>
@@ -81,8 +168,8 @@
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
     var disqus_config = function () {
-        this.page.url = '/2018/01/15/hadoop-codebase.html';
-        this.page.identifier = '20180115';
+        this.page.url = '/2018/03/13/things-what-I-should-know-as-a-java-developer.html';
+        this.page.identifier = '20180313';
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -215,7 +302,7 @@
 			});
 			// 查询
 			var query = new AV.Query('Default_Class');
-			query.equalTo('key', '20180115');
+			query.equalTo('key', '20180313');
 			query.first().then(function(result) {
 				if (result) {
 					addOne(result)
@@ -223,8 +310,8 @@
 					//新建
 					var Blog = AV.Object.extend('Default_Class');
 					var blog = new Blog();
-					blog.set('title', 'Hadoop Codebase');
-					blog.set('key', '20180115');
+					blog.set('title', 'Things that I should master as a Java developer');
+					blog.set('key', '20180313');
 					blog.set('views', 0);
 					blog.save().then(function(page) {
 						addOne(page)
@@ -239,7 +326,7 @@
 					page.increment('views', 1);
 					page.fetchWhenSave(true);
 					page.save().then(function(page) {
-						$("#post-key-20180115").text(page.attributes.views);
+						$("#post-key-20180313").text(page.attributes.views);
 					}, function(error) {
 						if (error) {
 							throw error;
